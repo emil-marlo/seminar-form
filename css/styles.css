@@ -1,0 +1,119 @@
+body{
+  margin: 0;
+  background-color: #F0EBF8;
+}
+
+h1, h2{
+  font-family: 'Muli', sans-serif;
+  font-weight: 700;
+}
+
+p {
+  font-family: 'Muli', sans-serif;
+  font-weight: 400;
+}
+
+/* NavBar-like styles */
+header{
+  height: 150px;
+  background-color: #4C55D4;
+}
+
+.headingTitle{
+  margin: 0;
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 16px;
+  margin-left: 6rem;
+}
+
+.topContainerTexture{
+  height: 20px;
+  width: 50%;
+  background-color: #6F76FF;
+  box-shadow: 0 0 0 1px #6F76FF;
+  position: relative;
+  bottom: 40px;
+  z-index: 5;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.container{
+  height: 100%;
+  width: 50%;
+  background-color: white;
+  position: relative;
+  bottom: 40px;
+  z-index: 5;
+  box-shadow: 0 0 0 1px #d1c4e9;
+}
+
+
+
+/* Form styles */
+.formHeading{
+  line-height: 1.2;
+  padding: 2rem 2rem 0;
+}
+
+.formH1{
+  font-size: 1.5rem;
+}
+
+.formDetails {
+  font-size: 0.875rem;
+}
+
+.formSubHeading {
+  line-height: 1.2;
+  padding: 0 2rem 1rem;
+}
+
+.captionHeader {
+  font-size: 0.8rem;
+}
+
+.col-form-label-sm {
+  padding-bottom: 0;
+  line-height: 1;
+  font-size: 0.7rem;
+}
+
+.form-control{
+  width: 60%;
+  font-family: 'Muli', sans-serif;
+}
+
+.formFooter {
+  background-color: #4C55D4;
+  position: relative;
+  width: 50%;
+  margin-right: auto;
+  margin-left: auto;
+  line-height: 1.2;
+  padding: 0.8rem 2rem;
+  color: #fff;
+}
+
+/* Media query for small device */
+@media screen and (max-width: 660px){
+  .headingTitle{
+    margin-left: 2rem;
+  }
+
+  .topContainerTexture{
+    height: 0;
+  }
+
+  .container{
+    width: 80%;
+    position: relative;
+    z-index: 5;
+    bottom: 40px;
+  }
+
+  .form-control{
+    width: 100%;
+  }
+}
