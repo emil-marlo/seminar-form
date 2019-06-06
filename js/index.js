@@ -17,11 +17,16 @@ $("#yrsOfService").change(function() {
 });
 
 //dynamic dropdown
-
 $('.dept').css("display", "none");
 
 $('#divSelection').change(function(){
   $('.NaNdept').hide();
   $('.dept').hide();
   $('#'+this.value).show();
+});
+
+//input type getFileName to upload
+$('input[type="file"]').change(function(e){
+var fileName = e.target.files[0].name;
+document.querySelector("#filename").innerHTML = fileName;
 });
