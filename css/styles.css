@@ -27,6 +27,29 @@ header{
   margin-left: 6rem;
 }
 
+ul{
+  float: right;
+  position: relative;
+  bottom: 40px;
+  right: 6rem;
+}
+
+li {
+  float: left;
+  padding: 0 20px;
+  list-style-type: none;
+}
+
+.social-icon {
+  color: #fff;
+}
+
+.social-icon:hover {
+  /* background-color: #68D5A1; */
+  /* background-color: #6F76FF; */
+  background-color: #5D64DF;
+}
+
 .topContainerTexture{
   height: 20px;
   width: 50%;
@@ -83,6 +106,38 @@ header{
 .form-control{
   width: 60%;
   font-family: 'Muli', sans-serif;
+  font-size: 0.8rem;
+}
+
+.dateField {
+  width: 30%;
+}
+
+.numOfServiceField {
+  width: 12%;
+}
+
+/* Details  */
+.radioRow {
+  margin-left: 0;
+}
+
+.radioLabel{
+  font-family: 'Muli', sans-serif;
+  font-size: .8rem;
+  padding-top: 5px;
+}
+
+.topicField {
+  width: 100%;
+}
+
+.currency {
+  width: 18%;
+}
+
+.amountField {
+  width: 30%;
 }
 
 .formFooter {
@@ -91,6 +146,7 @@ header{
   width: 50%;
   margin-right: auto;
   margin-left: auto;
+  margin-bottom: 15px;
   line-height: 1.2;
   padding: 0.8rem 2rem;
   color: #fff;
@@ -98,6 +154,11 @@ header{
 
 /* Media query for small device */
 @media screen and (max-width: 660px){
+
+  ul {
+    display: none;
+  }
+
   .headingTitle{
     margin-left: 2rem;
   }
@@ -115,5 +176,14 @@ header{
 
   .form-control{
     width: 100%;
+  }
+
+  .currency {
+    width: 30%;
+    margin-right: 20px;
+  }
+
+  .amountField {
+    width: 50%;
   }
 }

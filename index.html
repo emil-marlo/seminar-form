@@ -23,6 +23,12 @@
         <i class="fab fa-wpforms"></i>
         Seminar Request Form
       </h1>
+
+      <ul>
+        <li><i class="fab fa-facebook-square fa-2x social-icon"></i></li>
+        <li><i class="fab fa-twitter-square fa-2x social-icon"></i></li>
+        <li><i class="fas fa-envelope-square fa-2x social-icon"></i></li>
+      </ul>
     </header>
 
   <div class="topContainerTexture"> </div>
@@ -38,17 +44,119 @@
         <div class="formSubHeading">
           <h2 class="captionHeader"><i class="fas fa-user-alt"></i> Personal Information</h2>
           <label class="col-form-label-sm">Full Name <span style="color:red">*</span></label>
+          <input type="text" class="form-control" name="" autofocus>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Position <span style="color:red">*</span></label>
           <input type="text" class="form-control" name="">
         </div>
 
         <div class="formSubHeading">
-          <label class="col-form-label-sm">Email Address <span style="color:red">*</span></label>
+          <label class="col-form-label-sm">Division <span style="color:red">*</span></label>
+          <select class="form-control" id="divSelection" name="">
+          <option value="NaN">--None--</option>
+          <option value="ccd">RLC Commercial Centers Division</option>
+          <option value="">RLC Integrated Infrastructure Division</option>
+          <option value="">RLC Main</option>
+          <option value="rd">RLC Residential Division</option>
+          <option value="">RLC Office Building Division</option>
+          <option value="">RLC Robinsons Homes</option>
+          <option value="">RLC Robinsons Hotels and Resorts</option>
+          </select>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Department <span style="color:red">*</span></label>
+          <select class="form-control NaNdept" id="NaN" name="">
+            <option value="">--None--</option>
+          </select>
+
+          <select class="form-control dept" id="ccd" name="">
+            <option value="">CCD - Accounting</option>
+            <option value="">CCD - Engineering</option>
+          </select>
+
+          <select class="form-control dept" id="rd" name="">
+            <option value="">RD - Accounting</option>
+          </select>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Date Regularized <span style="color:red">*</span></label>
+          <input type="date" class="form-control dateField" name="">
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Length of Service <span style="color:red">*</span>: <span id="numberOfRange"></span> <span id="yrLabel"></span> </label>
+          <input type="range" id="yrsOfService" class="form-control-range" list="tickmarks" name="" step=".1"  min="0" max="20" value="1">
+
+          <datalist id="tickmarks">
+            <option value="0" label="0">
+            <option value="5">
+            <option value="10">
+            <option value="15" label="15">
+            <option value="20" label="20">
+        </datalist>
+
+        <hr class="my-4">
+        </div>
+        <!-- /**************************************** DETAILS ********************************/ -->
+        <div class="formSubHeading">
+          <h2 class="captionHeader"><i class="fas fa-info-circle"></i> Details</h2>
+          <label class="col-form-label-sm">Type of Service <span style="color:red">*</span></label>
+          <div class="row radioRow">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+              <label class="custom-control-label radioLabel" for="customRadioInline1">Local</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+              <label class="custom-control-label radioLabel" for="customRadioInline2">Abroad</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Topic <span style="color:red">*</span></label>
+          <input type="text" class="form-control topicField" name="">
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Amount <span style="color:red">*</span></label>
+          <div class="row radioRow">
+            <select class="form-control currency custom-select mr-sm-2" id="inlineFormCustomSelect">
+             <option selected>Choose...</option>
+             <option value="1">PHP</option>
+             <option value="2">USD</option>
+           </select>
+           <input type="text" class="form-control amountField" name="" value="" placeholder="Enter amount here..">
+          </div>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Venue <span style="color:red">*</span></label>
           <input type="text" class="form-control" name="">
         </div>
 
         <div class="formSubHeading">
-          <label class="col-form-label-sm">Contact Number <span style="color:red">*</span></label>
-          <input type="text" class="form-control" name="">
+          <label class="col-form-label-sm">Schedule <span style="color:red">*</span></label>
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <label class="col-form-label-sm">Start Date</label>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <label class="col-form-label-sm">End Date</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <input type="date" class="form-control" name="" value="">
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <input type="date" class="form-control" name="" value="">
+            </div>
+          </div>
         </div>
 
     </div>
@@ -63,5 +171,8 @@
     <!-- Boostrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/index.js" charset="utf-8"></script>
   </body>
 </html>
