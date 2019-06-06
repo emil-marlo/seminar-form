@@ -153,7 +153,7 @@ li {
 }
 
 /* Media query for small device */
-@media screen and (max-width: 660px){
+@media screen and (max-width: 1200px){
 
   ul {
     display: none;
@@ -179,11 +179,11 @@ li {
   }
 
   .currency {
-    width: 30%;
+    width: 18%;
     margin-right: 20px;
   }
 
   .amountField {
-    width: 50%;
+    width: 25%;
   }
 }
