@@ -165,6 +165,15 @@ li {
     background-color: #69f0ae;
 }
 
+.btn-primary{
+  background-color: #6F76FF;
+  border: 1px solid #4C55D4;
+}
+
+.btn-primary:hover, .btn-primary:focus {
+  background-color: #4C55D4;
+}
+
 .formFooter {
   background-color: #4C55D4;
   position: relative;
