@@ -168,6 +168,7 @@ li {
 .btn-primary{
   background-color: #6F76FF;
   border: 1px solid #4C55D4;
+  margin-top: 20px;
 }
 
 .btn-primary:hover, .btn-primary:focus {
