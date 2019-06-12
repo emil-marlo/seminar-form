@@ -2,11 +2,16 @@
 
 const express = require('express');
 const bodyParser = require('body-parser');
+const ejs = require('ejs');
 
 const app = express();
+app.set('view engine', 'ejs');
+
+//set static ss and js files
+app.use(express.static("public"));
 
 app.get("/", function(req,res){
-  res.send("Hello World!");
+  res.render("form");
 });
 
 app.listen(3002, function(){

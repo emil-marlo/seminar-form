@@ -1,0 +1,147 @@
+<!-- //include header.ejs here -->
+<%- include("partials/header.ejs"); %>
+
+        <div class="formHeading">
+          <h1 class="formH1">Form Heading</h1>
+          <p class="formDetails">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+          <hr class="my-4">
+        </div>
+
+        <div class="formSubHeading">
+          <h2 class="captionHeader"><i class="fas fa-user-alt"></i> Personal Information</h2>
+          <label class="col-form-label-sm">Full Name <span style="color:red">*</span></label>
+          <input type="text" class="form-control" name="" autofocus>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Position <span style="color:red">*</span></label>
+          <input type="text" class="form-control" name="">
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Division <span style="color:red">*</span></label>
+          <select class="form-control" id="divSelection" name="">
+          <option value="NaN">--None--</option>
+          <option value="ccd">RLC Commercial Centers Division</option>
+          <option value="">RLC Integrated Infrastructure Division</option>
+          <option value="">RLC Main</option>
+          <option value="rd">RLC Residential Division</option>
+          <option value="">RLC Office Building Division</option>
+          <option value="">RLC Robinsons Homes</option>
+          <option value="">RLC Robinsons Hotels and Resorts</option>
+          </select>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Department <span style="color:red">*</span></label>
+          <select class="form-control NaNdept" id="NaN" name="">
+            <option value="">--None--</option>
+          </select>
+
+          <select class="form-control dept" id="ccd" name="">
+            <option value="">CCD - Accounting</option>
+            <option value="">CCD - Engineering</option>
+          </select>
+
+          <select class="form-control dept" id="rd" name="">
+            <option value="">RD - Accounting</option>
+          </select>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Date Regularized <span style="color:red">*</span></label>
+          <input type="date" class="form-control dateField" name="">
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Length of Service <span style="color:red">*</span>: <span id="numberOfRange"></span> <span id="yrLabel"></span> </label>
+          <input type="range" id="yrsOfService" class="form-control-range" list="tickmarks" name="" step=".1"  min="0" max="20" value="1">
+
+          <datalist id="tickmarks">
+            <option value="0" label="0">
+            <option value="5">
+            <option value="10">
+            <option value="15" label="15">
+            <option value="20" label="20">
+        </datalist>
+
+        <hr class="my-4">
+        </div>
+        <!-- /**************************************** DETAILS ********************************/ -->
+        <div class="formSubHeading">
+          <h2 class="captionHeader"><i class="fas fa-info-circle"></i> Details</h2>
+          <label class="col-form-label-sm">Type of Service <span style="color:red">*</span></label>
+          <div class="row radioRow">
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+              <label class="custom-control-label radioLabel" for="customRadioInline1">Local</label>
+            </div>
+            <div class="custom-control custom-radio custom-control-inline">
+              <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+              <label class="custom-control-label radioLabel" for="customRadioInline2">Abroad</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Topic <span style="color:red">*</span></label>
+          <input type="text" class="form-control topicField" name="">
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Amount <span style="color:red">*</span></label>
+          <div class="row radioRow">
+            <select class="form-control currency custom-select mr-sm-2" id="inlineFormCustomSelect">
+             <option selected>Choose...</option>
+             <option value="1">PHP</option>
+             <option value="2">USD</option>
+           </select>
+           <input type="text" class="form-control amountField" name="" value="" placeholder="Enter amount here..">
+          </div>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Venue <span style="color:red">*</span></label>
+          <input type="text" class="form-control" name="">
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Schedule <span style="color:red">*</span></label>
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <label class="col-form-label-sm">Start Date</label>
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <label class="col-form-label-sm">End Date</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 col-sm-6">
+              <input type="date" class="form-control" name="" value="">
+            </div>
+            <div class="col-md-6 col-sm-6">
+              <input type="date" class="form-control" name="" value="">
+            </div>
+          </div>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Justification <span style="color:red">*</span></label>
+          <textarea name="name" class="form-control topicField" rows="3" cols="80"></textarea>
+        </div>
+
+        <div class="formSubHeading">
+          <label class="col-form-label-sm">Proof of Invitation <em>(Please attach Brochure/Proposal/Invitation)</em> <span style="color:red">*</span></label>
+          <div class="row radioRow">
+            <input type="file" name="" id="file-1" class="inputfile" value="">
+            <label for="file-1"><i class="fas fa-upload"></i> <span id="filename">Choose a file</span> </label>
+          </div>
+        </div>
+
+        <div class="formSubHeading">
+          <input type="submit" class="btn btn-primary fa fa-input" name="" value="Submit &#xf1d8">
+        </div>
+
+<!-- //include footer.ejs here -->
+<%- include("partials/footer.ejs"); %>
