@@ -47,7 +47,7 @@ li {
 .social-icon:hover {
   /* background-color: #68D5A1; */
   /* background-color: #6F76FF; */
-  background-color: #5D64DF;
+  color:#68D5A1;  
 }
 
 .topContainerTexture{
@@ -185,6 +185,11 @@ li {
   line-height: 1.2;
   padding: 0.8rem 2rem;
   color: #fff;
+}
+
+/* For sucess post route */
+.jumbotron{
+  background-color: #fff;
 }
 
 /* Media query for small device */
