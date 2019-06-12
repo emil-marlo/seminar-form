@@ -12,42 +12,48 @@
   <div class="formSubHeading">
     <h2 class="captionHeader"><i class="fas fa-user-alt"></i> Personal Information</h2>
     <label class="col-form-label-sm">Full Name <span style="color:red">*</span></label>
-    <input type="text" class="form-control" name="fullName" autofocus>
+    <input type="text" class="form-control" name="fullName" autofocus required>
+  </div>
+
+  <div class="formSubHeading">
+    <label class="col-form-label-sm">Email Address <span style="color:red">*</span></label>
+    <input type="email" class="form-control" name="email" required>
   </div>
 
   <div class="formSubHeading">
     <label class="col-form-label-sm">Position <span style="color:red">*</span></label>
-    <input type="text" class="form-control" name="">
+    <input type="text" class="form-control" name="position">
   </div>
 
   <div class="formSubHeading">
     <label class="col-form-label-sm">Division <span style="color:red">*</span></label>
-    <select class="form-control" id="divSelection" name="">
+    <select class="form-control" id="divSelection" name="division">
     <option value="NaN">--None--</option>
-    <option value="ccd">RLC Commercial Centers Division</option>
-    <option value="">RLC Integrated Infrastructure Division</option>
-    <option value="">RLC Main</option>
-    <option value="rd">RLC Residential Division</option>
-    <option value="">RLC Office Building Division</option>
-    <option value="">RLC Robinsons Homes</option>
-    <option value="">RLC Robinsons Hotels and Resorts</option>
+    <option value="CCD">RLC Commercial Centers Division</option>
+    <option value="IID">RLC Integrated Infrastructure Division</option>
+    <option value="Head Office">RLC Main</option>
+    <option value="RD">RLC Residential Division</option>
+    <option value="OBD">RLC Office Building Division</option>
+    <option value="Homes">RLC Robinsons Homes</option>
+    <option value="RHR">RLC Robinsons Hotels and Resorts</option>
     </select>
   </div>
 
   <div class="formSubHeading">
     <label class="col-form-label-sm">Department <span style="color:red">*</span></label>
-    <select class="form-control NaNdept" id="NaN" name="">
-      <option value="">--None--</option>
+    <!-- <p class="dept"></p> -->
+    <select class="form-control dept" name="dept">
+      <option value="">None</option>
     </select>
 
-    <select class="form-control dept" id="ccd" name="">
-      <option value="">CCD - Accounting</option>
-      <option value="">CCD - Engineering</option>
+    <!-- <select class="form-control dept" id="CCD" name="ccdDepartment">
+      <option value="Accounting">CCD - Accounting</option>
+      <option value="Engineering">CCD - Engineering</option>
     </select>
 
-    <select class="form-control dept" id="rd" name="">
-      <option value="">RD - Accounting</option>
-    </select>
+    <select class="form-control dept" id="RD" name="department">
+      <option value="Accounting">RD - Accounting</option>
+    </select> -->
   </div>
 
   <div class="formSubHeading">

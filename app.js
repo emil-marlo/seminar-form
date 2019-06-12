@@ -6,6 +6,15 @@ const ejs = require('ejs');
 
 const app = express();
 
+const personalInfo = [];
+let name = "";
+let email = "";
+let position = "";
+let department = "";
+let division = "";
+let dateRegular = "";
+let yrsOfService = "";
+
 app.set('view engine', 'ejs');
 
 app.use(bodyParser.urlencoded({extended: true}));
@@ -18,9 +27,24 @@ app.get("/", function(req,res){
 });
 
 app.post("/", function(req,res){
-  const name = req.body.fullName;
+  name = req.body.fullName;
+  email = req.body.email;
+  position = req.body.position;
+  division = req.body.division;
+  department = req.body.dept;
+
 
   res.render("sucess", {Name: name});
+});
+
+app.get("/list", function(req, res){
+  res.render("list", {
+    Name: name,
+    Email: email,
+    Position: position,
+    Division: division,
+    Department: department
+  });
 });
 
 

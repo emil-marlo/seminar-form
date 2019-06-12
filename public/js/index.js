@@ -17,12 +17,55 @@ $("#yrsOfService").change(function() {
 });
 
 //dynamic dropdown
-$('.dept').css("display", "none");
-
+let dept = [];
 $('#divSelection').change(function(){
-  $('.NaNdept').hide();
-  $('.dept').hide();
-  $('#'+this.value).show();
+  if(this.value === "CCD"){
+    dept = [
+      "CCD - Accounting",
+      "CCD - Administration",
+      "CCD - Advertising Sales",
+      "CCD - Carpark Management",
+      "CCD - Business Development",
+      "CCD - Cash Operations",
+      "CCD - Cinema Marketing",
+      "CCD - Cinema Operations",
+      "CCD - Corporate Engineering",
+      "CCD - Environmental Compliance",
+      "CCD - Corporate Lease Management",
+      "CCD - Corporate Marketing",
+      "CCD - Corporate Project Group",
+      "CCD - Corporate Property Planning",
+      "CCD - Corporate Treasury",
+      "CCD - CPPD",
+      "CCD - CPPD Operations",
+      "CCD - CPPD Projects",
+      "CCD - Credit & Collection",
+      "CCD - Digital Marketing",
+      "CCD - Digital Office",
+      "CCD - Engineering",
+      "CCD - External Affairs",
+      "CCD - Financial Planning & Analysis",
+      "CCD - Food Services",
+      "CCD - Housekeeping",
+      "CCD - Human Resources",
+      "CCD - Information Technology",
+      "CCD - Internal Audit",
+      "CCD - Investor Relations"
+    ];
+
+  }
+  else if(this.value === "RD"){
+    dept = ["MBMC", "Engineering", "Leasing"];
+  }
+  else{
+    dept = [""];
+  }
+
+  let string = "";
+  for(let i = 0; i< dept.length; i++){
+    string = string + '<option>'+dept[i]+'</option>';
+    $('.dept').html(string);
+  }
 });
 
 //input type getFileName to upload
