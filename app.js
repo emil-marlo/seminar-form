@@ -6,14 +6,14 @@ const ejs = require('ejs');
 
 const app = express();
 
-const personalInfo = [];
-let name = "";
-let email = "";
-let position = "";
-let department = "";
-let division = "";
-let dateRegular = "";
-let yrsOfService = "";
+const infos = [];
+// let name = "";
+// let email = "";
+// let position = "";
+// let department = "";
+// let division = "";
+// let dateRegular = "";
+// let yrsOfService = "";
 
 app.set('view engine', 'ejs');
 
@@ -27,30 +27,30 @@ app.get("/", function(req,res){
 });
 
 app.post("/", function(req,res){
-  name = req.body.fullName;
-  email = req.body.email;
-  position = req.body.position;
-  division = req.body.division;
-  department = req.body.dept;
+  // name = req.body.fullName;
+  // email = req.body.email;
+  // position = req.body.position;
+  // division = req.body.division;
+  // department = req.body.dept;
 
+  const info = {
+    name: req.body.fullName,
+    email: req.body.email,
+    position: req.body.position,
+    division: req.body.division,
+    department: req.body.dept
+  };
 
-  res.render("sucess", {Name: name});
+  infos.push(info);
+
+  res.render("sucess", {infoName: info.name});
 });
 
 app.get("/list", function(req, res){
   res.render("list", {
-    Name: name,
-    Email: email,
-    Position: position,
-    Division: division,
-    Department: department
+    infos: infos
   });
 });
-
-
-
-
-
 
 
 app.listen(3002, function(){

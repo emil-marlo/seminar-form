@@ -14,14 +14,16 @@
     </tr>
   </thead>
   <tbody>
+    <% infos.forEach(function(info){ %>
+      <tr>
+        <td scope="row"><%= info.name %></td>
+        <td><%= info.email %></td>
+        <td><%= info.position %></td>
+        <td><%= info.division %></td>
+        <td><%= info.department %></td>
+      </tr>
+  <%  }); %>
 
-    <tr>
-      <td scope="row"><%= Name %></td>
-      <td><%= Email %></td>
-      <td><%= Position %></td>
-      <td><%= Division %></td>
-      <td><%= Department %></td>
-    </tr>
   </tbody>
 </table>
 
