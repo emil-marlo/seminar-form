@@ -41,29 +41,20 @@
 
   <div class="formSubHeading">
     <label class="col-form-label-sm">Department <span style="color:red">*</span></label>
-    <!-- <p class="dept"></p> -->
+
     <select class="form-control dept" name="dept">
-      <option value="">None</option>
+      <option value="">--None--</option>
     </select>
-
-    <!-- <select class="form-control dept" id="CCD" name="ccdDepartment">
-      <option value="Accounting">CCD - Accounting</option>
-      <option value="Engineering">CCD - Engineering</option>
-    </select>
-
-    <select class="form-control dept" id="RD" name="department">
-      <option value="Accounting">RD - Accounting</option>
-    </select> -->
   </div>
 
   <div class="formSubHeading">
     <label class="col-form-label-sm">Date Regularized <span style="color:red">*</span></label>
-    <input type="date" class="form-control dateField" name="">
+    <input type="date" class="form-control dateField" name="dateRegularized">
   </div>
 
   <div class="formSubHeading">
-    <label class="col-form-label-sm">Length of Service <span style="color:red">*</span>: <span id="numberOfRange"></span> <span id="yrLabel"></span> </label>
-    <input type="range" id="yrsOfService" class="form-control-range" list="tickmarks" name="" step=".1"  min="0" max="20" value="1">
+    <label class="col-form-label-sm">Length of Service <span style="color:red">*</span> <span id="numberOfRange"></span> <span id="yrLabel"></span> </label>
+    <!-- <input type="range" id="yrsOfService" class="form-control-range" list="tickmarks" name="yrsOfService" step=".1"  min="0" max="20" value="1">
 
     <datalist id="tickmarks">
       <option value="0" label="0">
@@ -71,21 +62,34 @@
       <option value="10">
       <option value="15" label="15">
       <option value="20" label="20">
-  </datalist>
+  </datalist> -->
+  <div class="row">
+    <div class="numOfServiceGrp">
+      <label class="col-form-label-sm">Year/s:</label>
+      <input type="number" name="" class="form-control numOfService" min="1" max="12">
+    </div>
+
+    <div class="numOfServiceGrp">
+      <label class="col-form-label-sm">Month/s:</label>
+      <input type="number" name="" class="form-control numOfService" min="1" max="30">
+    </div>
+  </div>
+
 
   <hr class="my-4">
   </div>
+
   <!-- /**************************************** DETAILS ********************************/ -->
   <div class="formSubHeading">
     <h2 class="captionHeader"><i class="fas fa-info-circle"></i> Details</h2>
     <label class="col-form-label-sm">Type of Service <span style="color:red">*</span></label>
     <div class="row radioRow">
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+        <input type="radio" id="customRadioInline1" name="local" class="custom-control-input">
         <label class="custom-control-label radioLabel" for="customRadioInline1">Local</label>
       </div>
       <div class="custom-control custom-radio custom-control-inline">
-        <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+        <input type="radio" id="customRadioInline2" name="abroad" class="custom-control-input">
         <label class="custom-control-label radioLabel" for="customRadioInline2">Abroad</label>
       </div>
     </div>
@@ -93,24 +97,24 @@
 
   <div class="formSubHeading">
     <label class="col-form-label-sm">Topic <span style="color:red">*</span></label>
-    <input type="text" class="form-control topicField" name="">
+    <input type="text" class="form-control topicField" name="topic">
   </div>
 
   <div class="formSubHeading">
     <label class="col-form-label-sm">Amount <span style="color:red">*</span></label>
     <div class="row radioRow">
-      <select class="form-control currency custom-select mr-sm-2" id="inlineFormCustomSelect">
+      <select class="form-control currency custom-select mr-sm-2" id="inlineFormCustomSelect" name="currency">
        <option selected>Choose...</option>
-       <option value="1">PHP</option>
-       <option value="2">USD</option>
+       <option value="">PHP</option>
+       <option value="">USD</option>
      </select>
-     <input type="text" class="form-control amountField" name="" value="" placeholder="Enter amount here..">
+     <input type="text" class="form-control amountField" name="amount" value="" placeholder="Enter amount here..">
     </div>
   </div>
 
   <div class="formSubHeading">
     <label class="col-form-label-sm">Venue <span style="color:red">*</span></label>
-    <input type="text" class="form-control" name="">
+    <input type="text" class="form-control" name="venue">
   </div>
 
   <div class="formSubHeading">
@@ -125,17 +129,17 @@
     </div>
     <div class="row">
       <div class="col-md-6 col-sm-6">
-        <input type="date" class="form-control" name="" value="">
+        <input type="date" class="form-control" name="startDate" value="">
       </div>
       <div class="col-md-6 col-sm-6">
-        <input type="date" class="form-control" name="" value="">
+        <input type="date" class="form-control" name="endDate" value="">
       </div>
     </div>
   </div>
 
   <div class="formSubHeading">
     <label class="col-form-label-sm">Justification <span style="color:red">*</span></label>
-    <textarea name="name" class="form-control topicField" rows="3" cols="80"></textarea>
+    <textarea name="justification" class="form-control topicField" rows="3" cols="80"></textarea>
   </div>
 
   <div class="formSubHeading">

@@ -47,7 +47,7 @@ li {
 .social-icon:hover {
   /* background-color: #68D5A1; */
   /* background-color: #6F76FF; */
-  color:#68D5A1;  
+  color:#68D5A1;
 }
 
 .topContainerTexture{
@@ -113,9 +113,13 @@ li {
   width: 30%;
 }
 
-.numOfServiceField {
-  width: 12%;
+.numOfServiceGrp{
+  padding: 6px 0 6px 12px;
+  margin-left: 0.5%;
+  margin-right: 0;
+  width: 115px;
 }
+
 
 /* Details  */
 .radioRow {
